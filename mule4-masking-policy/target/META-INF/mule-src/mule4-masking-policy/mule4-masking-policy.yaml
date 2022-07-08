@@ -1,0 +1,24 @@
+id: mule4-masking-policy
+name: mule4-masking-policy
+description: Mask Fields on Outgoing Response
+category: Custom
+type: custom
+resourceLevelSupported: true
+encryptionSupported: false
+standalone: true
+requiredCharacteristics: []
+providedCharacteristics: []
+configuration: 
+  - propertyName: maskingSelectorsList
+    name: List of selectors
+    description: List of fields to be masked, separated by comma (ssn,dob... etc)
+    type: string
+    allowMultiple: true
+    optional: true
+    defaultValue: ssn,dob
+  - propertyName: exemptedUsers
+    name: List of users to be exempted
+    description: List of users to be excluded, separated by comma (user1,user2,user3... etc)
+    type: string
+    allowMultiple: true
+    optional: true
